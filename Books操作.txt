@@ -1,0 +1,74 @@
+mysql> select * from books;
++----+----------+-----+-------+
+| id | name     | num | price |
++----+----------+-----+-------+
+|  1 | 水浒传   |  99 |   200 |
+|  2 | 三国演义 |  98 |   198 |
+|  3 | 红楼梦   | 100 |   100 |
++----+----------+-----+-------+
+3 rows in set
+
+mysql> select name,num from books
+;
++----------+-----+
+| name     | num |
++----------+-----+
+| 水浒传   |  99 |
+| 三国演义 |  98 |
+| 红楼梦   | 100 |
++----------+-----+
+3 rows in set
+
+mysql> select name as n, num as n from books;
++----------+-----+
+| n        | n   |
++----------+-----+
+| 水浒传   |  99 |
+| 三国演义 |  98 |
+| 红楼梦   | 100 |
++----------+-----+
+3 rows in set
+
+mysql> insert into books values(null,'西游记',99,10);
+Query OK, 1 row affected
+
+mysql> select * from books;
++----+----------+-----+-------+
+| id | name     | num | price |
++----+----------+-----+-------+
+|  1 | 水浒传   |  99 |   200 |
+|  2 | 三国演义 |  98 |   198 |
+|  3 | 红楼梦   | 100 |   100 |
+|  4 | 西游记   |  99 |    10 |
++----+----------+-----+-------+
+4 rows in set
+
+mysql> update books set name='test_update' where id = 4;
+Query OK, 1 row affected
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from books;
++----+-------------+-----+-------+
+| id | name        | num | price |
++----+-------------+-----+-------+
+|  1 | 水浒传      |  99 |   200 |
+|  2 | 三国演义    |  98 |   198 |
+|  3 | 红楼梦      | 100 |   100 |
+|  4 | test_update |  99 |    10 |
++----+-------------+-----+-------+
+4 rows in set
+
+mysql> delete from books where id = 4;
+Query OK, 1 row affected
+
+mysql> select * from books;
++----+----------+-----+-------+
+| id | name     | num | price |
++----+----------+-----+-------+
+|  1 | 水浒传   |  99 |   200 |
+|  2 | 三国演义 |  98 |   198 |
+|  3 | 红楼梦   | 100 |   100 |
++----+----------+-----+-------+
+3 rows in set
+
+mysql> 
