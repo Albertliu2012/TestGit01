@@ -71,4 +71,4 @@ mysql> select * from books;
 +----+----------+-----+-------+
 3 rows in set
 
-mysql> 
+mysql> insert 
